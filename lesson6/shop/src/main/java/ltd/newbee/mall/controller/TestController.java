@@ -1,7 +1,7 @@
-package com.example.mall.controller;
+package ltd.newbee.mall.controller;
 
 
-import com.example.mall.entity.SaleGoods;
+import ltd.newbee.mall.entity.SaleGoods;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +20,7 @@ public class TestController {
 
     @RequestMapping(value = "/test/httpmessageconverter",method = RequestMethod.POST)
     public SaleGoods httpMessageConverterTest(@RequestBody SaleGoods saleGoods){
+        System.out.println(saleGoods);
         System.out.println(saleGoods.toString());
         saleGoods.setType(saleGoods.getType() + 1);
         saleGoods.setGoodsName("商品名：" + saleGoods.getGoodsName());

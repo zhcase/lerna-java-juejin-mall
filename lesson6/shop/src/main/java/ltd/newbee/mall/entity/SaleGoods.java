@@ -1,4 +1,4 @@
-package com.example.mall.entity;
+package ltd.newbee.mall.entity;
 
 public class SaleGoods {
     private Integer id;
