@@ -21,8 +21,7 @@ public class MyBatisController {
         return userDao.findAllUsers();
     }
 
-//    新增一条记录
-
+    //新增一条记录
     @GetMapping("/users/mybatis/insert")
     public Boolean insert(String name,String password){
             if(StringUtils.isEmpty(name)||StringUtils.isEmpty(password)){
@@ -34,8 +33,7 @@ public class MyBatisController {
             return userDao.insertUser(user)>0;
     }
 
-//    修改一条记录
-
+    //修改一条记录
     @GetMapping("/users/mybatis/update")
     public  Boolean insert(Integer id,String name,String password){
         if(id==null||id<1||StringUtils.isEmpty(name)||StringUtils.isEmpty(password)){
